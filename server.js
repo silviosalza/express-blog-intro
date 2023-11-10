@@ -1,32 +1,17 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const postController = require("./controllers/postController")
+const homeController = require("./controllers/homeController")
 
 dotenv.config();
 
+//creo istanza express
 const app = express();
 
-//configuro file statici
+//configuro file statici con nome cartella
 app.use(express.static("public"));
 
-app.get("/" , (req,res) => {
-    res.format({
-        text: () => {
-            res.type("text").send("Benvenuto nel mio blog!")
-        },
-        html: () => {
-            res.type("html").send("<h1>Benvenuto nel mio blog!</h1>")
-        },
-        json: () => {
-            res.type("json").send({message: "Benvenuto nel mio blog!"})
-        },
-        default: () =>{
-            res.status(406).send("Not Acceptable")
-        }
-    })
-    return;
-    res.send("Funziona")
-});
+app.get("/" , homeController.index);
 
 app.get("/posts" , postController.index)
 
