@@ -1,3 +1,15 @@
+const express = require("express")
+const fs = require("fs");
+const path = require("path")
+
+
+/**
+ * 
+ * @param {import("express").Request} req 
+ * @param {import("express-serve-static-core").Response} res 
+ * @returns 
+ */
+
 function index(req,res){
 
         res.format({
@@ -5,7 +17,8 @@ function index(req,res){
                 res.type("text").send("Benvenuto nel mio blog sull'arte nipponica!")
             },
             html: () => {
-                res.type("html").send("<h1>Benvenuto nel mio blog sull'arte nipponica!</h1>")
+                const htmlContent = fs.readFileSync(path.resolve(__dirname,"../index.html"), "utf-8")
+                res.type("html").send(htmlContent)
             },
             json: () => {
                 res.type("json").send({message: "Benvenuto nel mio blog sull'arte nipponica!Benvenuto nel mio blog sull'arte nipponica!"})
