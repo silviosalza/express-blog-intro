@@ -3,6 +3,7 @@ const postsArray = require("../db/posts.json");
 function index(req,res){
     res.format({
         html: () => {
+            
             let html = ["<h1>Hokusai Art</h1>"]
             html.push("<ul>")
             for (const post of postsArray){

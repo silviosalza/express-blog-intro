@@ -17,7 +17,10 @@ function index(req,res){
                 res.type("text").send("Benvenuto nel mio blog sull'arte nipponica!")
             },
             html: () => {
-                const htmlContent = fs.readFileSync(path.resolve(__dirname,"../index.html"), "utf-8")
+                let htmlContent = fs.readFileSync(path.resolve(__dirname,"../index.html"), "utf-8")
+                let navbar = fs.readFileSync(path.resolve(__dirname,"../navbar.html"), "utf-8")
+
+                htmlContent = htmlContent.replace("@navbar", navbar)
                 res.type("html").send(htmlContent)
             },
             json: () => {
