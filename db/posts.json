@@ -2,31 +2,31 @@
     {
         "titolo": "Titolo del primo post",
         "contenuto": "Contenuto del primo post...",
-        "immagine": "url_immagine_1.jpg",
+        "immagine": "hokusai1.jpg",
         "tags": ["tag1", "tag2", "tag3"]
     },
     {
         "titolo": "Titolo del secondo post",
         "contenuto": "Contenuto del secondo post...",
-        "immagine": "url_immagine_2.jpg",
+        "immagine": "hokusai2.jpg",
         "tags": ["tag4", "tag5", "tag6"]
     },
     {
         "titolo": "Titolo del terzo post",
         "contenuto": "Contenuto del terzo post...",
-        "immagine": "url_immagine_3.jpg",
+        "immagine": "hokusai3.jpg",
         "tags": ["tag7", "tag8", "tag9"]
     },
     {
         "titolo": "Titolo del quarto post",
         "contenuto": "Contenuto del quarto post...",
-        "immagine": "url_immagine_4.jpg",
+        "immagine": "hokusai4.jpg",
         "tags": ["tag10", "tag11", "tag12"]
     },
     {
         "titolo": "Titolo del quinto post",
         "contenuto": "Contenuto del quinto post...",
-        "immagine": "url_immagine_5.jpg",
+        "immagine": "hokusai5.png",
         "tags": ["tag13", "tag14", "tag15"]
     }
 ]

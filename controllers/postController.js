@@ -7,7 +7,8 @@ function index(req,res){
             html.push("<ul>")
             for (const post of postsArray){
                 html.push(`<li>${post.titolo}</li>
-                <li>${post.contenuto}</li>`)
+                <li>${post.contenuto}</li>
+                <li><img src="/img/${post.immagine}" alt ="" style="width:200px" > </li>`)
             }
 
             html.push("</ul>")

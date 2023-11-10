@@ -6,6 +6,9 @@ dotenv.config();
 
 const app = express();
 
+//configuro file statici
+app.use(express.static("public"));
+
 app.get("/" , (req,res) => {
     res.format({
         text: () => {
