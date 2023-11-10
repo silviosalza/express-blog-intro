@@ -3,12 +3,13 @@ const postsArray = require("../db/posts.json");
 function index(req,res){
     res.format({
         html: () => {
-            let html = ["<h1>Bacheca</h1>"]
+            let html = ["<h1>Hokusai Art</h1>"]
             html.push("<ul>")
             for (const post of postsArray){
-                html.push(`<li>${post.titolo}</li>
+                html.push(`<li><h3>${post.titolo}</h3></li>
                 <li>${post.contenuto}</li>
-                <li><img src="/img/${post.immagine}" alt ="" style="width:200px" > </li>`)
+                <li><img src="/img/${post.immagine}" alt ="" style="width:400px" > </li>
+                <li><h5>Tags: ${post.tags}</h5></li>`)
             }
 
             html.push("</ul>")
